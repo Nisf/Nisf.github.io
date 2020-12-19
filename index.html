@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Nisf的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="菜鸟一只">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nisf的博客">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Nisf的博客">
+<meta property="og:description" content="菜鸟一只">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="NiSiFan">
+<meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Nisf的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -43,7 +46,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/assets/favicon.ico" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -101,7 +104,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/assets/favicon.ico" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -152,89 +155,45 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Third-Paper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hexo相关指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/17/Third-Paper/">Third Paper</a>
+      <a class="article-title" href="/2020/12/18/Hexo%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4/">Hexo 相关指令</a>
     </h1>
   
 
         
-        <a href="/2020/12/17/Third-Paper/" class="archive-article-date">
-  	<time datetime="2020-12-17T13:23:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
+        <a href="/2020/12/18/Hexo%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-12-18T13:12:41.340Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="This-is-my-third-blog-to-test-again"><a href="#This-is-my-third-blog-to-test-again" class="headerlink" title="This is my third blog to test again!"></a>This is my third blog to test again!</h1>
-      
+        <p>1.创建博客</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir myblog</span><br><span class="line"><span class="built_in">cd</span> myblog</span><br><span class="line">sudo hexo init <span class="comment">#创建一个最简单的博客</span></span><br><span class="line">hexo s <span class="comment">#启动博客</span></span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+<p>2.创建一篇新文章</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;new_article&quot;</span></span><br></pre></td></tr></table></figure>
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/17/Third-Paper/">展开全文 >></a>
-        </p>
-      
+<p>3.重新生成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="string">&quot;new_article&quot;</span></span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"><span class="built_in">cd</span> ..  <span class="comment">#要切换到博客的根目录之后 再执行之后的命令</span></span><br><span class="line">hexo g <span class="comment">#重新生成博客</span></span><br></pre></td></tr></table></figure>
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+<p>4.部署到github</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 在github上创建一个叫: 用户名.github.io 的 repository</span><br><span class="line">2. 在本地端 修改博客目录下的 _config.yml 文件 </span><br><span class="line">   下拉到最后一行 : <span class="built_in">type</span>: git</span><br><span class="line">   				  repo: 仓库的url地址</span><br><span class="line">   				  branch: master</span><br><span class="line">3. hexo d <span class="comment">#部署命令, 每次创建一篇新的文章之后 都要执行 hexo d 命令</span></span><br></pre></td></tr></table></figure>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+<p>5.更改博客主题(theme)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 将下载好的别人的主题文件夹 copy 到 themes/主题名/</span><br><span class="line">2. 修改 _config/yml 文件中的 theme</span><br></pre></td></tr></table></figure>
 
 
 
+<h2 id="Errors"><a href="#Errors" class="headerlink" title="Errors"></a>Errors</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 在使用别人的theme时，执行hexo g后会报编码错误. </span><br><span class="line">   Solution: 把 myblog/node_modules下的 hexo-theme-landscape文件夹 移动到 myblog/themes 文件下，并将文件夹改名为landscape. </span><br></pre></td></tr></table></figure>
 
-  
-    <article id="post-我的第二篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第二篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-12-17T13:19:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="这是我的第二篇博客"><a href="#这是我的第二篇博客" class="headerlink" title="这是我的第二篇博客"></a>这是我的第二篇博客</h2><p>用来测试github部署是否成功</p>
 
       
 
@@ -247,70 +206,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-12-17T12:11:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><hr>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/17/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/18/Hexo%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4/">展开全文 >></a>
         </p>
       
 
@@ -347,13 +243,13 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/17/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/12/18/hello-world/">Hello World</a>
     </h1>
   
 
         
-        <a href="/2020/12/17/hello-world/" class="archive-article-date">
-  	<time datetime="2020-12-17T12:03:44.122Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-17</time>
+        <a href="/2020/12/18/hello-world/" class="archive-article-date">
+  	<time datetime="2020-12-18T13:12:29.061Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
 </a>
         
       </header>
@@ -385,7 +281,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/17/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/12/18/hello-world/">展开全文 >></a>
         </p>
       
 
@@ -425,7 +321,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 NiSiFan
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
